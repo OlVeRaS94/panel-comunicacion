@@ -1,0 +1,52 @@
+<div class="container1 container">
+  <!-- Pills navs -->
+
+  <!-- Pills content -->
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="pills-login"
+      role="tabpanel"
+      aria-labelledby="tab-login"
+    >
+      <div class="text-center mb-3">
+        <p>Entra con tu cuenta Google:</p>
+        <button
+          type="button"
+          (click)="onClick()"
+          class="btn btn-warning btn-floating mx-1"
+        >
+          <i class="bi bi-google"></i>
+        </button>
+      </div>
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <p class="text-center">Entra con tu cuenta de usuario:</p>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" class="form-control" formControlName="email" />
+          <label class="form-label">Email</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+          />
+          <label class="form-label">Contraseña</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-warning btn-block mb-4">
+          Entrar
+        </button>
+      </form>
+
+      <div class="text-center">
+        <p>¿No tienes cuenta aún? <a href="/register"> Regístrate</a></p>
+      </div>
+    </div>
+  </div>
+</div>

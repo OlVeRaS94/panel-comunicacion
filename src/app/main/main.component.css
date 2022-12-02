@@ -1,0 +1,23 @@
+
+.container-fluid1 {
+    width: 60vw;
+  margin-left: 10%;
+
+}
+.btn-group {
+    margin-top: 3px;
+}
+.container-fluid1-1 {
+    width: 60vw;
+  margin-left: 15%;
+}
+.card {
+  border: fluid 2px orange;
+  justify-content: center;
+}
+.container-fluid {
+  width: 95vw;
+}
+.vista  {
+  display: flex;
+}

@@ -1,0 +1,736 @@
+<!-- MENÚ LATERAL -->
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-warning">
+      <div
+        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+        >
+          <span class="fs-5 d-none d-sm-inline">CATEGORÍA</span>
+        </a>
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- PRIMER LISTADO -->
+          <li>
+            <a
+              href="#submenu1"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-egg"></i>
+              <span class="ms-1 d-none d-sm-inline">Alimentación</span>
+            </a>
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu1"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Alimento de origen animal')"
+                  href="alimento-animal"
+                  >Alimento de origen animal.</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Alimento de origen vegetal')"
+                  href="alimento-vegetal"
+                  >Alimento de origen vegetal</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Alimento procesado')"
+                  href="alimento-procesado"
+                  >Alimento procesado.</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Alimento ultraprocesado')"
+                  href="#"
+                  >Alimento ultraprocesado</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Bebida')"
+                  href="#"
+                  >Bebida</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Gastronomía')"
+                  href="#"
+                  >Gastronomía</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Sabor')"
+                  href="#"
+                  >Sabor</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Cocina')"
+                  href="cocina"
+                  >Cocina.</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- SEGUNDO LISTADO -->
+
+          <li>
+            <a
+              href="#submenu2"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+            <i class="fs-4 bi bi-telephone"></i>
+
+              <span class="ms-1 d-none d-sm-inline">Comunicación</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu2"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100">
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu2"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('lexico')"
+                      href="lexico"
+                      >Léxico</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Señalética')"
+                      href="#"
+                      >Señalética</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Sistema de comunicación')"
+                      href="sis-comu"
+                      >Sistema de comunicación</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Deporte adaptado')"
+                      href="#"
+                      >Deporte adaptado</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Medio de comunicación')"
+                      href="#"
+                      >Medio de comunicación</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- TERCER LISTADO -->
+          <li>
+            <a
+              href="#submenu3"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-bicycle"></i>
+              <span class="ms-1 d-none d-sm-inline">Ocio</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu3"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100">
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu3"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Evento deportivo')"
+                      href="#"
+                      >Evento deportivo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Modalidad deportiva')"
+                      href="#"
+                      >Modalidad deportiva</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Reglamento deportivo')"
+                      href="#"
+                      >Reglamento deportivo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Deporte adaptado')"
+                      href="#"
+                      >Deporte adaptado</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Ropa deportiva')"
+                      href="#"
+                      >Ropa deportiva</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Material deportivo')"
+                      href="#"
+                      >Material deportivo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Instalación deportiva')"
+                      href="#"
+                      >Instalación deportiva</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Deportista')"
+                      href="#"
+                      >Deportista</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Grupo de deportes')"
+                      href="#"
+                      >Grupo de deportes</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CUARTO LISTADO  -->
+
+          <li>
+            <a
+              href="#submenu4"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-shop"></i>
+              <span class="ms-1 d-none d-sm-inline">Lugar</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu4"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Monumento')"
+                  href="#"
+                  >Monumento</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Edificio')"
+                  href="#"
+                  >Edificio</a
+                >
+              </li>
+              <ul
+                class="collapse nav flex-column ms-1"
+                id="submenu4"
+                data-bs-parent="#menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Edificio residencial')"
+                    href="#"
+                    >Edificio residencial</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Edificio comercial')"
+                    href="#"
+                    >Edificio comercial</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Edificio cultural')"
+                    href="#"
+                    >Edificio cultural</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Edificio religioso')"
+                    href="#"
+                    >Edificio religioso</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Instalación recreativa')"
+                    href="#"
+                    >Instalación recreativa</a
+                  >
+                </li>
+              </ul>
+              <!-- </li> -->
+            </ul>
+          </li>
+
+          <!-- QUINTO LISTADO -->
+
+          <li>
+            <a
+              href="#submenu5"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-bug"></i>
+              <span class="ms-1 d-none d-sm-inline">Ser vivo</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu5"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('persona')"
+                  href="persona"
+                  >Persona.</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Animal')"
+                  href="animal"
+                  >Animal.</a
+                >
+              </li>
+              <ul
+                class="collapse nav flex-column ms-1"
+                id="submenu5"
+                data-bs-parent="#menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Planta')"
+                    href="#"
+                    >Planta</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Ser extinto')"
+                    href="#"
+                    >Ser Extinto</a
+                  >
+                </li>
+              </ul>
+              <!-- </li> -->
+            </ul>
+
+            <!-- SEXTO LISTADO -->
+          </li>
+
+          <li>
+            <a
+              href="#submenu6"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-book-half"></i>
+              <span class="ms-1 d-none d-sm-inline">Educación</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu6"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Asignatura')"
+                  href="asignatura"
+                  >Asignatura.</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('material educativo')"
+                  href="#"
+                  >Material educativo</a
+                >
+              </li>
+              <ul
+                class="collapse nav flex-column ms-1"
+                id="submenu5"
+                data-bs-parent="#menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Atención a la diversidad')"
+                    href="#"
+                    >Atención a la diversidad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Alumnado')"
+                    href="alumnado"
+                    >Alumnado</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Personal educativo')"
+                    href="#"
+                    >Personal educativo</a
+                  >
+                </li>
+              </ul>
+              <!-- </li> -->
+            </ul>
+          </li>
+          <!-- SEPTIMO LISTADO -->
+          <li>
+            <a
+              href="#submenu7"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-cloud-sun"></i>
+              <span class="ms-1 d-none d-sm-inline">Tiempo</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu7"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('Evento')"
+                  href="evento"
+                  >Evento.</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  (click)="getPictograms('calendario')"
+                  href="#"
+                  >Calendario</a
+                >
+              </li>
+              <ul
+                class="collapse nav flex-column ms-1"
+                id="submenu5"
+                data-bs-parent="#menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Unidad de tiempo')"
+                    href="#"
+                    >Unidad de tiempo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Horas del día')"
+                    href="horas-dia"
+                    >Horas del día</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="getPictograms('Personal educativo')"
+                    href="#"
+                    >Personal educativo</a
+                  >
+                </li>
+              </ul>
+            </ul>
+          </li>
+
+          <!-- OCT LISTADO -->
+          <li>
+            <a
+              href="#submenu8"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-briefcase"></i>
+              <span class="ms-1 d-none d-sm-inline">Trabajo</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu8"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100">
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu8"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Sector primario')"
+                      href="sect-prim"
+                      >Sector primario</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Sector secundario')"
+                      href="#"
+                      >Sector secundario</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Sector terciario')"
+                      href="#"
+                      >Sector terciario</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Artista')"
+                      href="Artista"
+                      >Artista</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Ropa de trabajo')"
+                      href="#"
+                      >Ropa de trabajo</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+ <!-- NOVENO LISTADO -->
+          <li>
+            <a
+              href="#submenu9"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi bi-bank"></i>
+              <span class="ms-1 d-none d-sm-inline">Conocimiento</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu9"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100">
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu9"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Ciencias')"
+                      href="ciencias"
+                      >Ciencias</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Humanidades')"
+                      href="#"
+                      >Humanidades</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+<!-- DECIMO LISTADO -->
+<li>
+            <a
+              href="#submenu10"
+              data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle"
+            >
+              <i class="fs-4 bi-bootstrap"></i>
+              <span class="ms-1 d-none d-sm-inline">Objeto</span></a
+            >
+            <ul
+              class="collapse nav flex-column ms-1"
+              id="submenu10"
+              data-bs-parent="#menu"
+            >
+              <li class="w-100">
+                <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu10"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Color')"
+                      href="color"
+                      >Color.</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('Forma')"
+                      href="#"
+                      >Forma</a
+                    >
+                  </li>
+                    <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('tamaño')"
+                      href="#"
+                      >Tamaño</a
+                    >
+                  </li>
+                     <li>
+                    <a
+                      class="dropdown-item"
+                      (click)="getPictograms('textura')"
+                      href="#"
+                      >Textura</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+<!-- CARDS -->
+
+    <div *ngIf="pictogramsList" class="row">
+      <div class="col-md-4 mb-3" *ngFor="let pictogram of pictogramsList | paginate: { itemsPerPage: 6, currentPage: page }">
+        <a [href]="'/vistadetalle/' + pictogram._id">
+          <div class="card" style="width: 18rem">
+            <span class="border border-warning border border-5"></span>
+            <img
+              class="card-img-top"
+              [src]="'https://api.arasaac.org/api/pictograms/' + pictogram._id"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a
+                [href]="'/vistadetalle/' + pictogram._id"
+                class="btn btn-warning"
+                >Ver detalle</a
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGINACIÓN (PARTE DEL CÓDIGO EN EL BUCLE FOR) -->
+
+  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+                      nextLabel="Siguiente"></pagination-controls>

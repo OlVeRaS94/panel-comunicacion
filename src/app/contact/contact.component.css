@@ -1,0 +1,10 @@
+
+.text-center{
+  margin: 1em;
+}
+
+.email:invalid {
+  background-color: rgba(255, 0, 0, 0.267);
+}
+
+

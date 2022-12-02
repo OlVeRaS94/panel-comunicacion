@@ -1,0 +1,28 @@
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sergio{
+  max-width: 60%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.rocio{
+  max-width: 60%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+
+.toni {
+  max-width: 60%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
