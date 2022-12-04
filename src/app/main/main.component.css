@@ -13,11 +13,13 @@
   justify-content: center;
 }
 .container-fluid {
+  margin: 0;
   width: 90vw;
 }
 .vista  {
   display: flex;
 }
 .container-card {
+  margin: 30px;
   width: 80vw;
 }

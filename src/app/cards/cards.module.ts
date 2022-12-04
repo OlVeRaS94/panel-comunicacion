@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LexicoComponent } from './lexico/lexico.component';
 
 
 
 @NgModule({
-    declarations: [],
+    declarations: [
+    LexicoComponent
+  ],
     imports: [
         CommonModule,
     ]
