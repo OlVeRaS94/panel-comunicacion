@@ -705,7 +705,7 @@
     </div>
 
 <!-- CARDS -->
-
+<div class="container-card">
     <div *ngIf="pictogramsList" class="row">
       <div class="col-md-4 mb-3" *ngFor="let pictogram of pictogramsList | paginate: { itemsPerPage: 6, currentPage: page }">
         <a [href]="'/vistadetalle/' + pictogram._id">
@@ -730,6 +730,7 @@
   </div>
 </div>
 
+</div>
 <!-- PAGINACIÓN (PARTE DEL CÓDIGO EN EL BUCLE FOR) -->
 
   <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
