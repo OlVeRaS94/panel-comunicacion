@@ -58,7 +58,6 @@ const routes: Routes = [
   {
     path: 'vistadellate/:id',
     component: VistadellateComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/login')),
   },
   {
     path: 'alimento-animal',
