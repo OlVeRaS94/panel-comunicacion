@@ -37,7 +37,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     AboutusComponent,
     BackofficeComponent,
-
     LoginComponent,
     RegisterComponent,
     BackofficeuserComponent,
