@@ -23,17 +23,19 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.userService
       .login(this.formLogin.value)
-      .then((response) => {
+      .then(response => {
         console.log(response);
-        this.router.navigate(['/main']);
+        this.router.navigate(['/landing']);
       })
-      .catch((error) => console.log(error));
+      .catch(error => console.log(error));
   }
 
   onClick() {
     this.userService.loginWithGoogle().then((response) => {
       console.log(response);
-      this.router.navigate(['/main']).catch((error) => console.log(error));
-    });
+      this.router.navigate(['/landing']);
+    })
+    .catch((error) => console.log(error));
+
   }
 }

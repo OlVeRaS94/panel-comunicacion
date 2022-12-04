@@ -21,12 +21,14 @@ export class UserService {
   login({ email, password }: any) {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
+  
+  logout() {
+    return signOut(this.auth);
+  }
 
   loginWithGoogle() {
     return signInWithPopup(this.auth, new GoogleAuthProvider());
   }
 
-  logout() {
-    return signOut(this.auth);
-  }
+
 }

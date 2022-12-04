@@ -26,12 +26,16 @@ import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '../app/landing' },
-  { path: '**', component: LandingComponent },
   {
     path: 'landing',
     component: LandingComponent,
   },
+  { path: '', pathMatch: 'full', redirectTo: '/landing' },
+  { path: '', component: MainComponent,
+   ...canActivate(() => redirectUnauthorizedTo(['/register'])) },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent  },
+
   {
     path: 'aboutus',
     component: AboutusComponent,
@@ -39,34 +43,26 @@ const routes: Routes = [
   {
     path: 'backoffice',
     component: BackofficeComponent,
-    ...canActivate(() => redirectUnauthorizedTo('../app/landing')),
+    ...canActivate(() => redirectUnauthorizedTo('/register')),
   },
   {
     path: 'backofficeuser',
     component: BackofficeuserComponent,
-    ...canActivate(() => redirectUnauthorizedTo('../app/landing')),
+    ...canActivate(() => redirectUnauthorizedTo('/register')),
   },
   {
     path: 'contact',
     component: ContactComponent,
   },
   {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
     path: 'main',
     component: MainComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/landing')),
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/register')),
   },
   {
     path: 'vistadellate/:id',
     component: VistadellateComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/landing')),
+    ...canActivate(() => redirectUnauthorizedTo('/register')),
   },
   {
     path: 'alimento-animal',
