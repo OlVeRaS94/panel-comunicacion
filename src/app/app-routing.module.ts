@@ -26,7 +26,7 @@ import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/landing' },
+  { path: '', pathMatch: 'full', redirectTo: '../app/landing' },
   { path: '**', component: LandingComponent },
   {
     path: 'landing',
@@ -39,12 +39,12 @@ const routes: Routes = [
   {
     path: 'backoffice',
     component: BackofficeComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/landing')),
+    ...canActivate(() => redirectUnauthorizedTo('../app/landing')),
   },
   {
     path: 'backofficeuser',
     component: BackofficeuserComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/landing')),
+    ...canActivate(() => redirectUnauthorizedTo('../app/landing')),
   },
   {
     path: 'contact',
@@ -64,7 +64,7 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path: 'vistadetalle/:id',
+    path: 'vistadellate/:id',
     component: VistadellateComponent,
     ...canActivate(() => redirectUnauthorizedTo('/landing')),
   },
