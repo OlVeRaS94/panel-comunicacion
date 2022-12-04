@@ -5,6 +5,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ElementsModule } from './elements/elements.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { RouterModule, Routes } from "@angular/router";
+// import { ROUTERCONFIG } from './commons/router';
+
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -63,6 +66,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ElementsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    // RouterModule.forRoot(ROUTERCONFIG),
   ],
 
   providers: [],
