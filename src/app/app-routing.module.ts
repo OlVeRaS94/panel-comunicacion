@@ -44,12 +44,12 @@ const routes: Routes = [
   {
     path: 'backoffice',
     component: BackofficeComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/login')),
+    //...canActivate(() => redirectUnauthorizedTo('/login')),
 },
   {
     path: 'backofficeuser',
     component: BackofficeuserComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/login')),
+    //...canActivate(() => redirectUnauthorizedTo('/login')),
   },
   {
     path: 'contact',
