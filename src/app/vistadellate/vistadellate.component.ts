@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { ActivatedRoute } from '@angular/router';
+import { MainComponent } from '../main/main.component';
 
 @Component({
   selector: 'app-vistadellate',
