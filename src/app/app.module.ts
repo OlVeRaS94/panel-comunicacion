@@ -6,7 +6,6 @@ import { ElementsModule } from './elements/elements.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from "@angular/router";
-// import { ROUTERCONFIG } from './commons/router';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -34,13 +33,13 @@ import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     AboutusComponent,
     BackofficeComponent,
-
     LoginComponent,
     RegisterComponent,
     BackofficeuserComponent,
@@ -66,7 +65,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ElementsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    // RouterModule.forRoot(ROUTERCONFIG),
   ],
 
   providers: [],

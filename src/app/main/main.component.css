@@ -1,23 +1,25 @@
 
 .container-fluid1 {
-    width: 60vw;
-  margin-left: 10%;
-
+  width: 60vw;
 }
 .btn-group {
     margin-top: 3px;
 }
 .container-fluid1-1 {
     width: 60vw;
-  margin-left: 15%;
 }
 .card {
   border: fluid 2px orange;
   justify-content: center;
 }
 .container-fluid {
-  width: 95vw;
+  margin: 0;
+  width: 90vw;
 }
 .vista  {
   display: flex;
+}
+.container-card {
+  margin: 30px;
+  width: 80vw;
 }

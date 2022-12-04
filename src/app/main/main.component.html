@@ -705,10 +705,10 @@
     </div>
 
 <!-- CARDS -->
-
+<div class="container-card">
     <div *ngIf="pictogramsList" class="row">
       <div class="col-md-4 mb-3" *ngFor="let pictogram of pictogramsList | paginate: { itemsPerPage: 6, currentPage: page }">
-        <a [href]="'/vistadetalle/' + pictogram._id">
+        <a [href]="'/vistadellate' + pictogram._id">
           <div class="card" style="width: 18rem">
             <span class="border border-warning border border-5"></span>
             <img
@@ -718,7 +718,7 @@
             />
             <div class="card-body">
               <a
-                [href]="'/vistadetalle/' + pictogram._id"
+                [href]="'/vistadellate' + pictogram._id"
                 class="btn btn-warning"
                 >Ver detalle</a
               >
@@ -730,6 +730,7 @@
   </div>
 </div>
 
+</div>
 <!-- PAGINACIÓN (PARTE DEL CÓDIGO EN EL BUCLE FOR) -->
 
   <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"

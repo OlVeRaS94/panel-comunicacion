@@ -26,13 +26,14 @@ import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 
 const routes: Routes = [
+
   {
     path: 'landing',
     component: LandingComponent,
   },
+
   { path: '', pathMatch: 'full', redirectTo: '/landing' },
-  { path: '', component: MainComponent,
-   ...canActivate(() => redirectUnauthorizedTo(['/register'])) },
+  { path: 'main', component: MainComponent,},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent  },
 
@@ -43,26 +44,21 @@ const routes: Routes = [
   {
     path: 'backoffice',
     component: BackofficeComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/register')),
-  },
+    ...canActivate(() => redirectUnauthorizedTo('/login')),
+},
   {
     path: 'backofficeuser',
     component: BackofficeuserComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/register')),
+    ...canActivate(() => redirectUnauthorizedTo('/login')),
   },
   {
     path: 'contact',
     component: ContactComponent,
   },
   {
-    path: 'main',
-    component: MainComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/register')),
-  },
-  {
     path: 'vistadellate/:id',
     component: VistadellateComponent,
-    ...canActivate(() => redirectUnauthorizedTo('/register')),
+    ...canActivate(() => redirectUnauthorizedTo('/login')),
   },
   {
     path: 'alimento-animal',

@@ -1,1 +1,29 @@
-<p>vistadellate works!</p>
+<div class="vista">
+  <app-main></app-main>
+
+<div *ngIf="pictogram">
+  <div class="col" class="tarjet">
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            class="card-img-top"
+            [src]="'https://api.arasaac.org/api/pictograms/' + pictogram._id"
+            alt="Card image cap"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ pictogram.keywords[0].keyword }}</h5>
+
+            <p class="card-text">
+              {{ pictogram.keywords[0].meaning }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

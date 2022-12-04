@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-vistadellate',
   templateUrl: './vistadellate.component.html',
-  styleUrls: ['./vistadellate.component.css']
+  styleUrls: ['./vistadellate.component.css'],
 })
 export class VistadellateComponent implements OnInit {
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
+  pictogram: any;
+  id: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.apiService.getPictogramById(this.id).subscribe((data) => {
+      this.pictogram = data;
+    });
   }
-
 }
